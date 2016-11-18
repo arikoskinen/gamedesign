@@ -1,0 +1,423 @@
+fileFormatVersion: 2
+guid: 2a9577a801f125a43b1dff17436522f6
+timeCreated: 1475737873
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Heavy_Sprite
+    21300002: Heavy_Fly_1
+    21300004: Heavy_Fly_2
+    21300006: Heavy_Shoot_1
+    21300008: Heavy_Sheet_0
+    21300010: Heavy_Shoot_3
+    21300012: Heavy_Shoot_4_Projectile
+    21300014: Heavy_Shoot_5
+    21300016: Heavy_Shoot_6
+    21300018: Heavy_Shoot_7
+    21300020: Heavy_Shoot_8
+    21300022: Heavy_Die_1
+    21300024: Heavy_Die_2
+    21300026: Heavy_Die_3
+    21300028: Heavy_Die_4
+    21300030: Heavy_Die_5
+    21300032: Heavy_Die_6
+    21300034: Heavy_Die_7
+    21300036: Heavy_Die_8
+    21300038: Heavy_Die_9
+    21300040: Heavy_Die_10
+    21300042: Heavy_Die_11
+    21300044: Heavy_Die_12
+    21300046: Heavy_Die_13
+    21300048: Heavy_Projectile_1
+    21300050: Heavy_Projectile_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Heavy_Sprite
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 165
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Fly_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 162
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Fly_2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 162
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Shoot_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 77
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 77
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Shoot_3
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 77
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Shoot_4_Projectile
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 77
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Shoot_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Shoot_6
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 2
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Shoot_7
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 2
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Shoot_8
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 2
+        width: 34
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 165
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 165
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_3
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 165
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 165
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_5
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 165
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_6
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 110
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 110
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_8
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 110
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_9
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 110
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_10
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 110
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_11
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 56
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_12
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 56
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Die_13
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 57
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Projectile_1
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 59
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Heavy_Projectile_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 59
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
