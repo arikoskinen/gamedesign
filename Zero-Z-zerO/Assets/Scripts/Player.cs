@@ -9,7 +9,10 @@ public class Player : MonoBehaviour {
 
     public float tspeed = 0.0096f;                  // Value for touch "speed".
 
-    public float speed = 0.02f;                     // player ship movement speed
+    public float speed;                     // player ship movement speed
+    private float normalSpeed;
+    private float slowdown;
+
     public float xpos = 0f;
     public float ypos = -1.44f;
     public float zpos = 0f;
@@ -68,6 +71,8 @@ public class Player : MonoBehaviour {
     // Keyboatd control function ends here
 
     void Awake() {
+        normalSpeed = speed;
+        slowdown = speed / 2;
         defaultInvisTime = invisTime;
         currentState = PlayerState.normal;
         // Player Sounds 
@@ -112,6 +117,12 @@ public class Player : MonoBehaviour {
     }
         // Update is called once per frame
         void Update() {
+        if (Input.GetButton("Slowdown")) {
+            speed = slowdown;
+        } else {
+            speed = normalSpeed;
+            
+        }
         PlayerControl();
         if (currentState == PlayerState.invis)
         {
