@@ -8,7 +8,7 @@ public class FrameSystem : MonoBehaviour {
     private float savedCooldown;
     public float duration;
     private float savedDuration;
-    private bool frameInUse = false;
+    public bool frameInUse = false;
     private bool onCooldown = false;
 
 	// Use this for initialization
@@ -17,22 +17,23 @@ public class FrameSystem : MonoBehaviour {
         savedDuration = duration;
     }
 	
-    void FrameOn() {
+    public void FrameOn() {
         normal.SetActive(false);
         frame.SetActive(true);
         frameInUse = true;
     }
 
-    void FrameOff() {
+    public void FrameOff() {
         normal.SetActive(true);
         frame.SetActive(false);
+        duration = savedDuration;
         frameInUse = false;
         onCooldown = true;
     }
 
 	// Update is called once per frame
 	void Update () {
-        if (!onCooldown && Input.GetButtonDown("Frame")) { 
+        if (!onCooldown && Input.GetButtonDown("Frame")) {
             FrameOn();
         } else if (onCooldown) {
             cooldown -= Time.deltaTime;
@@ -44,7 +45,6 @@ public class FrameSystem : MonoBehaviour {
         if (frameInUse) {
             duration -= Time.deltaTime;
             if (duration <= 0) {
-                duration = savedDuration;
                 FrameOff();
             }
         }

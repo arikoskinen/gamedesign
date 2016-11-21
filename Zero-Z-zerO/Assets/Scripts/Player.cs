@@ -41,6 +41,7 @@ public class Player : MonoBehaviour {
 
     public enum PlayerState { normal, invis};
     public PlayerState currentState;
+    public FrameSystem frame;
 
     // Player Keyboard Control function
     void PlayerControl() {
@@ -119,9 +120,10 @@ public class Player : MonoBehaviour {
         void Update() {
         if (Input.GetButton("Slowdown")) {
             speed = slowdown;
-        } else {
+        } else if (frame.frameInUse) {
+            speed = slowdown;
+        } else { 
             speed = normalSpeed;
-            
         }
         PlayerControl();
         if (currentState == PlayerState.invis)
