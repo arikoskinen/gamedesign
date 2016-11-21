@@ -20,7 +20,7 @@ public class EnemyEye : MonoBehaviour, IDamageable {
     void Start() {
         saveShootTime = whenToShoot;
         currentHP = maxHP;
-        player = GameObject.Find("PlayerShip NEO").transform;
+        player = GameObject.Find("PlayerShip").transform;
     }
 
     public void EyeShoots() {

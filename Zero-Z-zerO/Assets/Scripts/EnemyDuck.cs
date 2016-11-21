@@ -21,7 +21,7 @@ public class EnemyDuck : MonoBehaviour, IDamageable {
     void Start() {
         saveShootTime = whenToShoot;
         currentHP = maxHP;
-        player = GameObject.Find("PlayerShip NEO").transform;
+        player = GameObject.Find("PlayerShip").transform;
         gun = new GameObject[projectileSpawn.Length];
 
     }
