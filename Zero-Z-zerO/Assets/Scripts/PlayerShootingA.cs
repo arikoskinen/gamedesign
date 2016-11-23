@@ -34,10 +34,10 @@ public class PlayerShootingA : MonoBehaviour {
             float vol = Random.Range(volLowRange, volHighRange);
             playerFireSnd.PlayOneShot(shootSound, vol);
 
-            skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, ProjectileLeftSpawn.rotation);
-            skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, ProjectileRightSpawn.rotation);
-
+                skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, ProjectileLeftSpawn.rotation);
+                skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, ProjectileRightSpawn.rotation);
+            }
             firingAnim.Play("AnimatedShipAnimFiring");
         }
     }
-}
+

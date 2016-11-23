@@ -3,12 +3,16 @@ using System.Collections;
 
 public class FrameSystem : MonoBehaviour {
     public GameObject normal;
+    public GameObject normalGun;
     public GameObject frame;
+    public GameObject frameEnemy;
+    public bool enemyFrame;
     public float cooldown;
     private float savedCooldown;
     public float duration;
     private float savedDuration;
     public bool frameInUse = false;
+    public bool frameEnemyInUse = false;
     private bool onCooldown = false;
 
 	// Use this for initialization
@@ -18,23 +22,33 @@ public class FrameSystem : MonoBehaviour {
     }
 	
     public void FrameOn() {
-        normal.SetActive(false);
+        normalGun.SetActive(false);
         frame.SetActive(true);
         frameInUse = true;
     }
 
     public void FrameOff() {
-        normal.SetActive(true);
+        normalGun.SetActive(true);
         frame.SetActive(false);
         duration = savedDuration;
         frameInUse = false;
         onCooldown = true;
     }
 
+    public void EnemyFrame() {
+        normal.SetActive(false);
+        frameEnemy.SetActive(true);
+        frameEnemyInUse = true;
+}
+
 	// Update is called once per frame
 	void Update () {
         if (!onCooldown && Input.GetButtonDown("Frame")) {
-            FrameOn();
+            if (enemyFrame) {
+                EnemyFrame();
+            }else {
+                FrameOn();
+            }
         } else if (onCooldown) {
             cooldown -= Time.deltaTime;
             if (cooldown <= 0) {

@@ -6,7 +6,6 @@ interface IDamageable {
 interface ICustomSpawner {
     void Initialize(GameObject spawned);
 }
-
 interface IProjectileOwner
 {
     void RegisterProjectile(GameObject projectile);

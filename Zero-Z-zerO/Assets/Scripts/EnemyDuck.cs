@@ -2,12 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class EnemyDuck : MonoBehaviour, IDamageable {
-    public float currentHP;
-    public int maxHP;
-    public float speed;
-    public float maxRotationSpeed;
-    public Transform player;
+public class EnemyDuck : MonoBehaviour {
+   
     public GameObject[] projectile;
     private float spawnDistance = 0;
     public float whenToShoot = 5;
@@ -20,8 +16,6 @@ public class EnemyDuck : MonoBehaviour, IDamageable {
 
     void Start() {
         saveShootTime = whenToShoot;
-        currentHP = maxHP;
-        player = GameObject.Find("PlayerShip").transform;
         gun = new GameObject[projectileSpawn.Length];
 
     }
@@ -36,26 +30,8 @@ public class EnemyDuck : MonoBehaviour, IDamageable {
         }
     }
 
-    public void ReceiveHit(float damage) {
-        currentHP -= damage;
-        if (currentHP == 0) {
-            // Die_animation here
-            Animator DuckAnim = gameObject.transform.Find("Duck_Sprite").GetComponent<Animator>();
-            DuckAnim.Play("Duck_die2");
-            Destroy(gameObject, 0.7f);
-
-        }
-    }
-    void OnTriggerEnter2D(Collider2D col) {
-        if (col.gameObject.tag == "Border") {
-            Destroy(gameObject);
-        }
-    }
     // Update is called once per frame
     void Update() {
-        if (currentHP >= 0) {
-        transform.Translate(Vector3.down* speed * Time.deltaTime);
-        }
         whenToShoot -= Time.deltaTime;
         if (canShoot) {
             whenToShoot -= Time.deltaTime;

@@ -8,24 +8,24 @@ public class PlayerStartPos : MonoBehaviour {
     private GameObject playerStartPos;
 
     // Use this for initialization
-    void Start() {
+    void Awake() {
     }
 
-    void SpawnPlayer() {
-        playerStartPos = (GameObject)Instantiate(player, playerSpawn.position, playerSpawn.rotation);
+    public void SpawnPlayer() {
+        if (lives >= 1) {
+            lives -= 1;
+            playerStartPos = (GameObject)Instantiate(player, playerSpawn.position, playerSpawn.rotation);
+        }
     }
 
     // Update is called once per frame
     void Update() {
 
-        if (Input.GetKey(KeyCode.Q)) {
-            SpawnPlayer();
-        }
-
-        if (player = null) {
+        if (Input.GetKeyDown(KeyCode.Q)) {
             SpawnPlayer();
             lives -= 1;
         }
+
         if (lives < 0) {
             Debug.Log("Game Over");
         }

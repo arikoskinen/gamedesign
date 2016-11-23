@@ -2,16 +2,20 @@
 using System.Collections;
 
 public class ProjectilePlayer : MonoBehaviour {
-    public int dMG;
+    GameObject player;
+    PlayerStats stats;
+    public float dMG;
     public float speed;
 
 	// Use this for initialization
-	void Start () {
-	
-	}
-	
+	void Awake () {
+        player = GameObject.FindGameObjectWithTag("Player");
+        stats = player.GetComponent<PlayerStats>();
+    }
+
 	// Update is called once per frame
 	void Update () {
+        dMG = stats.power;
         transform.Translate(Vector3.up * speed * Time.deltaTime);
     }
 

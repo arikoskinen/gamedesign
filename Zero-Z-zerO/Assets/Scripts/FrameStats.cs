@@ -16,9 +16,6 @@ public class FrameStats : MonoBehaviour, IDamageable {
     }
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.R)) {
-            currentHP -= 1;
-        }
         if (currentHP == 0) {
             frameSystem.FrameOff();
             currentHP = maxHP;

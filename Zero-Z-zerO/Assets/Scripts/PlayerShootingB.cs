@@ -36,11 +36,16 @@ public class PlayerShootingB : MonoBehaviour {
             float vol = Random.Range(volLowRange, volHighRange);
             playerFireSnd.PlayOneShot(shootSound, vol);
 
-            skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, ProjectileLeftSpawn.rotation);
-            skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, ProjectileRightSpawn.rotation);
             skodemiddle = (GameObject)Instantiate(PlayerProjectile, ProjectileMiddleSpawn.position, ProjectileMiddleSpawn.rotation);
 
-            firingAnim.Play("AnimatedShipAnimFiring");
+            if (Input.GetButton("Slowdown")) {
+                skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, ProjectileLeftSpawn.rotation);
+                skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, ProjectileRightSpawn.rotation);
+            } else {
+                skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, Quaternion.Euler(0, 0, 25));
+                skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, Quaternion.Euler(0, 0, -25));
+            }
+            //firingAnim.Play("AnimatedShipAnimFiring");
         }
     }
 }
