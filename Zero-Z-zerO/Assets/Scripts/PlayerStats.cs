@@ -18,8 +18,7 @@ public class PlayerStats : MonoBehaviour, IDamageable {
             Destroy(dood);
         }
     }
-
-    void Update() {
+        void Update() {
 
     }
 }

@@ -8,9 +8,10 @@ public class EnemyStats : MonoBehaviour, IDamageable {
     public float maxRotationSpeed;
     public bool lookAt;
     public Transform player;
+    public float score;
 
     // Use this for initialization
-    void Awake () {
+    void Awake() {
         currentHP = maxHP;
         player = GameObject.Find("PlayerShip").transform;
     }
@@ -25,6 +26,9 @@ public class EnemyStats : MonoBehaviour, IDamageable {
     void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.tag == "Border") {
             Destroy(gameObject);
+        }
+        if (col.gameObject.tag == "Player") {
+            col.GetComponent<IDamageable>().ReceiveHit(1);
         }
     }
 
