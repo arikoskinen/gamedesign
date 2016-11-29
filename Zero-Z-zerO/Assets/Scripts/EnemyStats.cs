@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 
 public class EnemyStats : MonoBehaviour, IDamageable {
     public float currentHP;
@@ -8,7 +10,9 @@ public class EnemyStats : MonoBehaviour, IDamageable {
     public float maxRotationSpeed;
     public bool lookAt;
     public Transform player;
-    public float score;
+    public int score;
+    public int scoring;
+    public Text scoreText;
 
     // Use this for initialization
     void Awake() {
@@ -16,10 +20,21 @@ public class EnemyStats : MonoBehaviour, IDamageable {
         player = GameObject.Find("PlayerShip").transform;
     }
 
+public void ScoreCounter() {
+        scoring += score;
+        scoreText.text = "SCORE: "+ scoring;
+        print("Hit "+scoring);
+    }
+
+
+
     public void ReceiveHit(float damage) {
         currentHP -= damage;
+        ScoreCounter();
+
         if (currentHP == 0) {
             Destroy(gameObject);
+         
         }
     }
 
