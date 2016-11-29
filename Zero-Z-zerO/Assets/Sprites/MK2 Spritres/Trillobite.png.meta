@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fbf7f6f4852933b43bc7996e709f676a
-timeCreated: 1480421204
+timeCreated: 1480423524
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -25,7 +25,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -258,7 +258,7 @@ TextureImporter:
         serializedVersion: 2
         x: 2
         y: 39
-        width: 116
+        width: 117
         height: 72
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -296,9 +296,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 362
-        y: 52
+        y: 56
         width: 117
-        height: 72
+        height: 68
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
