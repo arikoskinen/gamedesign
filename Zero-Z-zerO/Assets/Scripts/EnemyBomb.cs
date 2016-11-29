@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class EnemyBomb : MonoBehaviour, IDamageable {
     public float currentHP;
@@ -15,6 +16,8 @@ public class EnemyBomb : MonoBehaviour, IDamageable {
     public GameObject projectile;
     private GameObject gun;
     public Transform projectileSpawn;
+    public int score;
+    public Text scoreText;
 
     // Use this for initialization
     void Start() {
