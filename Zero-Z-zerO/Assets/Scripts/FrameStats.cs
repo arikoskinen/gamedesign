@@ -4,12 +4,12 @@ using System.Collections;
 public class FrameStats : MonoBehaviour, IDamageable {
     public float currentHP;
     public float maxHP;
-    public FrameSystem frameSystem;
+    FrameSystem frameSystem;
 
     // Use this for initialization
     void Awake() {
         currentHP = maxHP;
-
+        frameSystem = GetComponentInParent<FrameSystem>();
     }
     public void ReceiveHit(float damage) {
         currentHP -= damage;

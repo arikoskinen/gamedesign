@@ -37,7 +37,6 @@ public class PlayerShootingA : MonoBehaviour {
                 skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, ProjectileLeftSpawn.rotation);
                 skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, ProjectileRightSpawn.rotation);
             }
-            firingAnim.Play("AnimatedShipAnimFiring");
         }
     }
 

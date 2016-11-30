@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerShootingB : MonoBehaviour {
     public GameObject PlayerProjectile;             // player "bullet"
+    public GameObject PlayerProjectileSeeker;
     public Transform ProjectileLeftSpawn;
     public Transform ProjectileRightSpawn;
     private GameObject skodeleft;                   // player's left cannon bullet
@@ -18,6 +19,8 @@ public class PlayerShootingB : MonoBehaviour {
     public float PrjDestroyDelay = 2.2f;
     public bool autofire;
     private Animator firingAnim;            // player firing anim
+
+    public bool poweredUp;
 
     // Use this for initialization
     void Awake() {
@@ -36,14 +39,35 @@ public class PlayerShootingB : MonoBehaviour {
             float vol = Random.Range(volLowRange, volHighRange);
             playerFireSnd.PlayOneShot(shootSound, vol);
 
-            skodemiddle = (GameObject)Instantiate(PlayerProjectile, ProjectileMiddleSpawn.position, ProjectileMiddleSpawn.rotation);
+            skodemiddle = (GameObject)Instantiate(PlayerProjectile, ProjectileMiddleSpawn.position, ProjectileLeftSpawn.rotation);
 
-            if (Input.GetButton("Slowdown")) {
-                skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, ProjectileLeftSpawn.rotation);
-                skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, ProjectileRightSpawn.rotation);
+            if (poweredUp) {
+                if (Input.GetButton("Slowdown")) {
+                    skodemiddle = (GameObject)Instantiate(PlayerProjectile, ProjectileMiddleSpawn.position + new Vector3(-0.03f, 0, 0), ProjectileLeftSpawn.rotation);
+                    skodemiddle = (GameObject)Instantiate(PlayerProjectile, ProjectileMiddleSpawn.position + new Vector3(0.03f, 0, 0), ProjectileLeftSpawn.rotation);
+                    skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position + new Vector3(-0.03f, 0, 0), ProjectileLeftSpawn.rotation);
+                    skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position + new Vector3(0.03f, 0, 0), ProjectileLeftSpawn.rotation);
+                    skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position + new Vector3(-0.03f, 0, 0), ProjectileRightSpawn.rotation);
+                    skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position + new Vector3(0.03f, 0, 0), ProjectileRightSpawn.rotation);
+
+                    skodeleft = (GameObject)Instantiate(PlayerProjectileSeeker, ProjectileLeftSpawn.position + new Vector3(-0.05f, -0.15f, 0), Quaternion.Euler(0, 0, 90));
+                    skoderight = (GameObject)Instantiate(PlayerProjectileSeeker, ProjectileRightSpawn.position + new Vector3(0.05f, -0.15f, 0), Quaternion.Euler(0, 0, -90f));
+                } else {
+                    skodemiddle = (GameObject)Instantiate(PlayerProjectile, ProjectileMiddleSpawn.position + new Vector3(-0.03f, 0, 0), Quaternion.Euler(0, 0, 7.5f));
+                    skodemiddle = (GameObject)Instantiate(PlayerProjectile, ProjectileMiddleSpawn.position + new Vector3(0.03f, 0, 0), Quaternion.Euler(0, 0, -7.5f));
+                    skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, Quaternion.Euler(0, 0, 25));
+                    skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, Quaternion.Euler(0, 0, 15));
+                    skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, Quaternion.Euler(0, 0, -25));
+                    skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, Quaternion.Euler(0, 0, -15));
+                }
             } else {
-                skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, Quaternion.Euler(0, 0, 25));
-                skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, Quaternion.Euler(0, 0, -25));
+                if (Input.GetButton("Slowdown")) {
+                    skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, ProjectileLeftSpawn.rotation);
+                    skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, ProjectileRightSpawn.rotation);
+                } else {
+                    skodeleft = (GameObject)Instantiate(PlayerProjectile, ProjectileLeftSpawn.position, Quaternion.Euler(0, 0, 25));
+                    skoderight = (GameObject)Instantiate(PlayerProjectile, ProjectileRightSpawn.position, Quaternion.Euler(0, 0, -25));
+                }
             }
             //firingAnim.Play("AnimatedShipAnimFiring");
         }

@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: f3c574995f1f5444d9cd37c33263c257
-timeCreated: 1475735941
-licenseType: Pro
+timeCreated: 1480415125
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Duck_Sprite
@@ -78,7 +78,7 @@ TextureImporter:
         x: 1
         y: 104
         width: 31
-        height: 38
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
