@@ -8,16 +8,23 @@ public class EnemyStats : MonoBehaviour, IDamageable {
     public int maxHP;
     public float speed;
     public float maxRotationSpeed;
+    public bool destroyable;
     public bool lookAt;
     public Transform player;
+    SpriteRenderer sr;
+    float timer = 0.1f;
+    float delay = 0.1f;
     public int score;
     public int scoring;
     public Text scoreText;
+
+
 
     // Use this for initialization
     void Awake() {
         currentHP = maxHP;
         player = GameObject.Find("PlayerShip").transform;
+        sr = GetComponentInChildren<SpriteRenderer>();
     }
 
 public void ScoreCounter() {
@@ -31,8 +38,8 @@ public void ScoreCounter() {
     public void ReceiveHit(float damage) {
         currentHP -= damage;
         ScoreCounter();
-
-        if (currentHP == 0) {
+        sr.color = Color.black;
+        if (currentHP == 0 && destroyable) {
             Destroy(gameObject);
          
         }
@@ -49,7 +56,15 @@ public void ScoreCounter() {
 
     // Update is called once per frame
     void Update() {
-        if (currentHP > 0) {
+        if (sr.color == Color.black) {
+            timer -= Time.deltaTime;
+            if (timer <= 0) {
+                sr.color = Color.white;
+                timer = delay;
+                return;
+            }
+        }
+            if (currentHP > 0) {
             transform.Translate(Vector3.down * speed * Time.deltaTime);
         }
         if (player != null && lookAt) {
