@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: fbf7f6f4852933b43bc7996e709f676a
+timeCreated: 1480423524
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Trillobite_Open_1
+    21300002: Trillobite_Open_2
+    21300004: Trillobite_Open_3
+    21300006: Trillobite_Open_4
+    21300008: Trillobite_Open_5
+    21300010: Trillobite_Open_6
+    21300012: Trillobite_Open_7
+    21300014: Trillobite_Open_8
+    21300016: Trillobite_Open_9
+    21300018: Trillobite_Open_10
+    21300020: Trillobite_Open_11
+    21300022: Trillobite_Open_12
+    21300024: Trillobite_Damage_1
+    21300026: Trillobite_Damage_2
+    21300028: Trillobite_Fly_Closed_1
+    21300030: Trillobite_Fly_Closed_2
+    21300032: Trilobite_Fly_Open_1
+    21300034: Trilobite_Fly_Open_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Trillobite_Open_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 352
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Open_2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 352
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Open_3
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 352
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Open_4
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 352
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Open_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 277
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Open_6
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 277
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Open_7
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 277
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Open_8
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 277
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Open_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 202
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Open_10
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 202
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Open_11
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 202
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Open_12
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 202
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Damage_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 118
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Damage_2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 118
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Fly_Closed_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 39
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trillobite_Fly_Closed_2
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 39
+        width: 117
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trilobite_Fly_Open_1
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 127
+        width: 117
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Trilobite_Fly_Open_2
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 56
+        width: 117
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

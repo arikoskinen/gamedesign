@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class EnemyBomb : MonoBehaviour {
     private float spawnDistance = 0f;
@@ -13,6 +14,8 @@ public class EnemyBomb : MonoBehaviour {
     public GameObject projectile;
     private GameObject gun;
     public Transform projectileSpawn;
+    public int score;
+    public Text scoreText;
 
     void Awake () {
         sr = GetComponentInChildren<SpriteRenderer>();
