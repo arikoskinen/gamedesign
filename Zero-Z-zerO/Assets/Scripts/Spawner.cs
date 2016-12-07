@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour {
     private float savedTimer;
     public int spawnBoss = 0;
     public bool bossSpawned = false;
+    public bool random;
 
     public GameObject[] enemy;
     public int[] enemyNro;
@@ -16,33 +17,61 @@ public class Spawner : MonoBehaviour {
     public Transform bossSpawner;
     private GameObject bossSpawnSpot;
     public bool gameHasBoss;
+    public bool spawned = false;
+    public float gameTime;
+
+    float timer = 0.5f;
+    float delay = 0.5f;
+
+    public enum EnemyWave { wave1, wave2, wave3 };
+    public EnemyWave currentWave;
 
     // Use this for initialization
     void Start() {
+        currentWave = EnemyWave.wave1;
         savedTimer = spawnTimer;
         spawnSpot = new GameObject[spawner.Length];
 
-        spawnSpot[0] = (GameObject)Instantiate(enemy[0], spawner[0].position, spawner[0].rotation);
-        Debug.Log("Spawn Eye");
-        spawnSpot[2] = (GameObject)Instantiate(enemy[1], spawner[2].position, spawner[2].rotation);
-        Debug.Log("Spawn Duck");
-        spawnSpot[4] = (GameObject)Instantiate(enemy[2], spawner[4].position, spawner[4].rotation);
-        Debug.Log("Spawn Heavy");
+        //spawnSpot[0] = (GameObject)Instantiate(enemy[0], spawner[0].position, spawner[0].rotation);
+        //Debug.Log("Spawn Eye");
+        //spawnSpot[2] = (GameObject)Instantiate(enemy[1], spawner[2].position, spawner[2].rotation);
+        //Debug.Log("Spawn Duck");
+        //spawnSpot[4] = (GameObject)Instantiate(enemy[2], spawner[4].position, spawner[4].rotation);
+        //Debug.Log("Spawn Heavy");
     }
     public void Spawn() {
-        for (int l = 0; l < spawner.Length; l++) {
-            int r = Random.Range(0, 4);
-            if (r == 1) {
-                spawnSpot[l] = (GameObject)Instantiate(enemy[0], spawner[l].position, spawner[l].rotation);
-                Debug.Log("Spawn Eye");
+        if (random) {
+            for (int l = 0; l < spawner.Length; l++) {
+                int r = Random.Range(0, 4);
+                if (r == 1) {
+                    spawnSpot[l] = (GameObject)Instantiate(enemy[0], spawner[l].position, spawner[l].rotation);
+                    Debug.Log("Spawn Eye");
+                }
+                if (r == 2) {
+                    spawnSpot[l] = (GameObject)Instantiate(enemy[1], spawner[l].position, spawner[l].rotation);
+                    Debug.Log("Spawn Duck");
+                }
+                if (r == 3) {
+                    spawnSpot[l] = (GameObject)Instantiate(enemy[2], spawner[l].position, spawner[l].rotation);
+                    Debug.Log("Spawn Heavy");
+                }
             }
-            if (r == 2) {
-                spawnSpot[l] = (GameObject)Instantiate(enemy[1], spawner[l].position, spawner[l].rotation);
-                Debug.Log("Spawn Duck");
+        } else {
+            if (currentWave == EnemyWave.wave1) {
+                spawnSpot[0] = (GameObject)Instantiate(enemy[0], spawner[0].position, spawner[0].rotation);
+                spawnSpot[1] = (GameObject)Instantiate(enemy[0], spawner[1].position, spawner[1].rotation);
+                spawnSpot[2] = (GameObject)Instantiate(enemy[0], spawner[2].position, spawner[2].rotation);
+                spawnSpot[3] = (GameObject)Instantiate(enemy[0], spawner[3].position, spawner[3].rotation);
+                spawnSpot[4] = (GameObject)Instantiate(enemy[0], spawner[4].position, spawner[4].rotation);
             }
-            if (r == 3) {
-                spawnSpot[l] = (GameObject)Instantiate(enemy[2], spawner[l].position, spawner[l].rotation);
-                Debug.Log("Spawn Heavy");
+            if (currentWave == EnemyWave.wave2) {
+                spawnSpot[1] = (GameObject)Instantiate(enemy[1], spawner[1].position, spawner[1].rotation);
+                spawnSpot[3] = (GameObject)Instantiate(enemy[1], spawner[3].position, spawner[3].rotation);
+            }
+            if (currentWave == EnemyWave.wave3) {
+                spawnSpot[0] = (GameObject)Instantiate(enemy[2], spawner[0].position, spawner[0].rotation);
+                spawnSpot[2] = (GameObject)Instantiate(enemy[2], spawner[2].position, spawner[2].rotation);
+                spawnSpot[4] = (GameObject)Instantiate(enemy[2], spawner[4].position, spawner[4].rotation);
             }
         }
     }
@@ -52,20 +81,51 @@ public class Spawner : MonoBehaviour {
     }
     // Update is called once per frame
     void Update() {
-        if (!bossSpawned) {
-            spawnTimer -= Time.deltaTime;
-            if (spawnTimer <= 0) {
-                spawnBoss += 1;
-                if (spawnBoss <= 14) {
-                    Spawn();
-                    spawnTimer = savedTimer;
-                }
+        gameTime += Time.deltaTime;
+        if (gameTime >= 60) {
+            savedTimer = 2;
+        }
+            if (random) {
+            if (!bossSpawned) {
+                if (spawnTimer <= 0) {
+                    spawnBoss += 1;
+                    if (spawnBoss <= 14) {
+                        Spawn();
+                        spawnTimer = savedTimer;
+                    }
 
+                }
+                if (spawnBoss == 15 && gameHasBoss) {
+                    bossSpawned = true;
+                    SpawnBoss();
+                    spawnBoss = 0;
+                }
             }
-            if (spawnBoss == 15 && gameHasBoss) { 
-                bossSpawned = true;
-                SpawnBoss();
-                spawnBoss = 0;
+        } else {
+            if (currentWave == EnemyWave.wave1) {
+                spawnTimer -= Time.deltaTime;
+                if (spawnTimer <= 0) {
+
+                        Spawn();
+                    spawnTimer = savedTimer;
+                    currentWave = EnemyWave.wave2;
+                }
+            }
+            if (currentWave == EnemyWave.wave2) {
+                spawnTimer -= Time.deltaTime;
+                if (spawnTimer <= 0) {
+                        Spawn();
+                    spawnTimer = savedTimer;
+                    currentWave = EnemyWave.wave3;
+                }
+            }
+            if (currentWave == EnemyWave.wave3) {
+                spawnTimer -= Time.deltaTime;
+                if (spawnTimer <= 0) {
+                        Spawn();
+                    spawnTimer = savedTimer;
+                    currentWave = EnemyWave.wave1;
+                }
             }
         }
     }

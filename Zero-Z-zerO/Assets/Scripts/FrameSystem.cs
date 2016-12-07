@@ -54,7 +54,10 @@ public class FrameSystem : MonoBehaviour {
             //if (enemyFrame) {
             //    EnemyFrame();
             //}else {
-                FrameOn();
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy_Projectile");
+            foreach (GameObject enemy in enemies)
+            GameObject.Destroy(enemy);
+            FrameOn();
             //}
         } else if (onCooldown) {
             cooldown -= Time.deltaTime;

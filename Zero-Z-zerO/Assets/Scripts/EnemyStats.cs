@@ -18,8 +18,6 @@ public class EnemyStats : MonoBehaviour, IDamageable {
     public int scoring;
     public Text scoreText;
 
-
-
     // Use this for initialization
     void Awake() {
         currentHP = maxHP;
@@ -27,17 +25,17 @@ public class EnemyStats : MonoBehaviour, IDamageable {
         sr = GetComponentInChildren<SpriteRenderer>();
     }
 
-public void ScoreCounter() {
-        scoring += score;
-        scoreText.text = "SCORE: "+ scoring;
-        print("Hit "+scoring);
-    }
+//public void ScoreCounter() {
+//        scoring += score;
+//        scoreText.text = "SCORE: "+ scoring;
+//        print("Hit "+scoring);
+//    }
 
 
 
     public void ReceiveHit(float damage) {
         currentHP -= damage;
-        ScoreCounter();
+        //ScoreCounter();
         sr.color = Color.black;
         if (currentHP == 0 && destroyable) {
             Destroy(gameObject);

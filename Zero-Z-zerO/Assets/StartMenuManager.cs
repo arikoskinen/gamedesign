@@ -20,6 +20,8 @@ public class StartMenuManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        if (Input.GetButton("Fire")) {
+            SceneManager.LoadScene("Scenes/1st_Stage");
+        }
+    }
 }

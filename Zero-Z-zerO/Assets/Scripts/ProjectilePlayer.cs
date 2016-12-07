@@ -62,7 +62,7 @@ public class ProjectilePlayer : MonoBehaviour {
         if (frameProjectile) {
             dMG = 1;
         } else {
-            dMG = stats.power;
+            dMG = 1;
         }
 
 
