@@ -37,7 +37,7 @@ public class PlayerShootingB : MonoBehaviour {
             nextfiring = Time.time + firingRate;
 
             float vol = Random.Range(volLowRange, volHighRange);
-            playerFireSnd.PlayOneShot(shootSound, vol);
+            //playerFireSnd.PlayOneShot(shootSound, vol);
 
             skodemiddle = (GameObject)Instantiate(PlayerProjectile, ProjectileMiddleSpawn.position, ProjectileLeftSpawn.rotation);
 
