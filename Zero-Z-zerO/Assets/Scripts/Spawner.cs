@@ -82,8 +82,9 @@ public class Spawner : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         gameTime += Time.deltaTime;
-        if (gameTime >= 60) {
-            savedTimer = 2;
+        if (gameTime >= 10) {
+            savedTimer -= 0.2f;
+            gameTime = 0;
         }
             if (random) {
             if (!bossSpawned) {
